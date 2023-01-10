@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1B1DC12E296CDD2100F7D523 /* whatsAppCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DC12D296CDD2100F7D523 /* whatsAppCloneApp.swift */; };
-		1B1DC130296CDD2100F7D523 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DC12F296CDD2100F7D523 /* ContentView.swift */; };
 		1B1DC132296CDD2200F7D523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DC131296CDD2200F7D523 /* Assets.xcassets */; };
 		1B1DC135296CDD2200F7D523 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DC134296CDD2200F7D523 /* Preview Assets.xcassets */; };
 		1B1DC13F296CDD2300F7D523 /* whatsAppCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DC13E296CDD2300F7D523 /* whatsAppCloneTests.swift */; };
 		1B1DC149296CDD2300F7D523 /* whatsAppCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DC148296CDD2300F7D523 /* whatsAppCloneUITests.swift */; };
 		1B1DC14B296CDD2300F7D523 /* whatsAppCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DC14A296CDD2300F7D523 /* whatsAppCloneUITestsLaunchTests.swift */; };
+		1B1DC15C296CDEC600F7D523 /* ChatScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DC15B296CDEC600F7D523 /* ChatScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		1B1DC12A296CDD2100F7D523 /* whatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1DC12D296CDD2100F7D523 /* whatsAppCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsAppCloneApp.swift; sourceTree = "<group>"; };
-		1B1DC12F296CDD2100F7D523 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B1DC131296CDD2200F7D523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B1DC134296CDD2200F7D523 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B1DC13A296CDD2300F7D523 /* whatsAppCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsAppCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +43,7 @@
 		1B1DC144296CDD2300F7D523 /* whatsAppCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsAppCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1DC148296CDD2300F7D523 /* whatsAppCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsAppCloneUITests.swift; sourceTree = "<group>"; };
 		1B1DC14A296CDD2300F7D523 /* whatsAppCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsAppCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B1DC15B296CDEC600F7D523 /* ChatScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 		1B1DC12C296CDD2100F7D523 /* whatsAppClone */ = {
 			isa = PBXGroup;
 			children = (
+				1B1DC157296CDDCA00F7D523 /* ChatScreen */,
 				1B1DC12D296CDD2100F7D523 /* whatsAppCloneApp.swift */,
-				1B1DC12F296CDD2100F7D523 /* ContentView.swift */,
 				1B1DC131296CDD2200F7D523 /* Assets.xcassets */,
 				1B1DC133296CDD2200F7D523 /* Preview Content */,
 			);
@@ -125,6 +125,38 @@
 				1B1DC14A296CDD2300F7D523 /* whatsAppCloneUITestsLaunchTests.swift */,
 			);
 			path = whatsAppCloneUITests;
+			sourceTree = "<group>";
+		};
+		1B1DC157296CDDCA00F7D523 /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DC158296CDE4E00F7D523 /* Model */,
+				1B1DC159296CDE5A00F7D523 /* ViewModel */,
+				1B1DC15A296CDE6A00F7D523 /* View */,
+			);
+			path = ChatScreen;
+			sourceTree = "<group>";
+		};
+		1B1DC158296CDE4E00F7D523 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B1DC159296CDE5A00F7D523 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B1DC15A296CDE6A00F7D523 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DC15B296CDEC600F7D523 /* ChatScreenView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1DC130296CDD2100F7D523 /* ContentView.swift in Sources */,
+				1B1DC15C296CDEC600F7D523 /* ChatScreenView.swift in Sources */,
 				1B1DC12E296CDD2100F7D523 /* whatsAppCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +457,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +487,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
