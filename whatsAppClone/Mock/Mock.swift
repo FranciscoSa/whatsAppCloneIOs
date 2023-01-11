@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Mock {
     
@@ -88,31 +87,4 @@ struct Mock {
                                  "10:09",
                                  "14:00"]
     
-    public let color = [Color.red,
-                        Color.blue,
-                        Color.black,
-                        Color.green,
-                        Color.gray,
-                        Color.brown,
-                        Color.cyan,
-                        Color.indigo,
-                        Color.pink,
-                        Color.purple,
-                        Color.brown,
-                        Color.cyan,
-                        Color.indigo,
-                        Color.pink,
-                        Color.purple,
-                        Color.gray,
-                        Color.brown,
-                        Color.cyan,
-                        Color.indigo,
-                        Color.pink,
-                        Color.purple,
-                        Color.brown,
-                        Color.cyan,
-                        Color.indigo,
-                        Color.red,
-                        Color.blue,
-                        Color.black]
 }

@@ -22,8 +22,7 @@ struct ChatScreenView: View {
                         ForEach(1..<14) { i in
                             generateChatCard(contactName: mock.chatList[i],
                                              message: mock.message[i],
-                                             time: mock.time[i],
-                                             color: mock.color[i])
+                                             time: mock.time[i])
                         }
                     }
                 }
@@ -63,7 +62,7 @@ extension ChatScreenView {
                 Spacer()
                 
                 Button ("Novo Grupo"){
-                    print("click on Listas de trasmissão")
+                    print("click on Novo Grupo")
                 }
                 
             }
@@ -72,12 +71,12 @@ extension ChatScreenView {
 }
 
 extension ChatScreenView {
-    func generateChatCard (contactName: String, message: String, time: String, color: Color) -> some View {
+    func generateChatCard (contactName: String, message: String, time: String) -> some View {
         var chatCard: some View {
             HStack (spacing:20) {
                 Image(systemName: "square.and.pencil")
                     .frame(width: 55, height: 55)
-                    .background(color)
+                    .background(Color.blue)
                     .cornerRadius(30)
                 
                 VStack (alignment: .leading) {
