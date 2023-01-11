@@ -10,11 +10,24 @@ import SwiftUI
 
 struct ChatScreenView: View {
     @State private var searchText: String = ""
+    let mock = Mock()
     
     var body: some View {
         NavigationView {
-            
-            chatListRow
+            VStack {
+                ScrollView {
+                    buttonsAfterSearch
+                    Divider()
+                    VStack (spacing: 12){
+                        ForEach(1..<14) { i in
+                            generateChatCard(contactName: mock.chatList[i],
+                                             message: mock.message[i],
+                                             time: mock.time[i],
+                                             color: mock.color[i])
+                        }
+                    }
+                }
+            }
             
             .navigationTitle("Conversas")
             .toolbar {
@@ -25,7 +38,7 @@ struct ChatScreenView: View {
                 }
                 ToolbarItem (placement: .navigationBarTrailing) {
                     Button {
-                        print ("Clic on square and pencil")
+                        print ("Click on square and pencil")
                     } label: {
                         Image(systemName: "square.and.pencil")
                     }
@@ -39,18 +52,54 @@ struct ChatScreenView: View {
 }
 
 extension ChatScreenView {
-    var chatListRow: some View {
-        List {
-            Section {
-                Text (searchText)
-                Text (searchText)
-                Text (searchText)
-                Text (searchText)
-                Text (searchText)
-                Text (searchText)
-                Text (searchText)
+    var buttonsAfterSearch: some View {
+        Group {
+            HStack {
+                
+                Button ("Listas de trasmissão"){
+                    print("click on Listas de trasmissão")
+                }
+                
+                Spacer()
+                
+                Button ("Novo Grupo"){
+                    print("click on Listas de trasmissão")
+                }
+                
             }
-        }.listStyle(.grouped)
+        }.padding(.horizontal)
+    }
+}
+
+extension ChatScreenView {
+    func generateChatCard (contactName: String, message: String, time: String, color: Color) -> some View {
+        var chatCard: some View {
+            HStack (spacing:20) {
+                Image(systemName: "square.and.pencil")
+                    .frame(width: 55, height: 55)
+                    .background(color)
+                    .cornerRadius(30)
+                
+                VStack (alignment: .leading) {
+                    HStack {
+                        Text(contactName)
+                            .bold()
+                        
+                        Spacer()
+                        
+                        Text (time)
+                            .font(.system(size: 14, weight: .regular, design: .default))
+                    }
+                    
+                    Text (message)
+                        .font(.system(size: 14, weight: .light, design: .default))
+                    
+                    Divider()
+                }
+            }.padding(.horizontal)
+        }
+        
+        return chatCard
     }
 }
 
