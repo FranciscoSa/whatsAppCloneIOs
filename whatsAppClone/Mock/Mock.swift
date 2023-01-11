@@ -97,18 +97,18 @@ struct Mock {
                         Color.cyan,
                         Color.indigo,
                         Color.pink,
-                        Color.purple
+                        Color.purple,
                         Color.brown,
                         Color.cyan,
                         Color.indigo,
                         Color.pink,
-                        Color.purple
+                        Color.purple,
                         Color.gray,
                         Color.brown,
                         Color.cyan,
                         Color.indigo,
                         Color.pink,
-                        Color.purple
+                        Color.purple,
                         Color.brown,
                         Color.cyan,
                         Color.indigo,
