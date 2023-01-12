@@ -20,9 +20,17 @@ struct ChatScreenView: View {
                     Divider()
                     VStack (spacing: 12){
                         ForEach(1..<14) { i in
-                            generateChatCard(contactName: mock.chatList[i],
-                                             message: mock.message[i],
-                                             time: mock.time[i])
+                            if searchText == "" {
+                                generateChatCard(contactName: mock.chatList[i],
+                                                 message: mock.message[i],
+                                                 time: mock.time[i])
+                            }else {
+                                if mock.chatList[i].contains(searchText) {
+                                    generateChatCard(contactName: mock.chatList[i],
+                                                     message: mock.message[i],
+                                                     time: mock.time[i])
+                                }
+                            }
                         }
                     }
                 }
@@ -44,9 +52,7 @@ struct ChatScreenView: View {
                 }
             }
         }
-        .searchable(text: $searchText) {
-            
-        }
+        .searchable(text: $searchText)
     }
 }
 
@@ -96,6 +102,9 @@ extension ChatScreenView {
                     Divider()
                 }
             }.padding(.horizontal)
+             .onTapGesture {
+                    print ("Click \(contactName)")
+             }
         }
         
         return chatCard
